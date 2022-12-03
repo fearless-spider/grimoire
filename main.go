@@ -11,33 +11,27 @@ import (
 )
 
 const content = `
-# Today’s Menu
-## Appetizers
-| Name        | Price | Notes                           |
-| ---         | ---   | ---                             |
-| Tsukemono   | $2    | Just an appetizer               |
-| Tomato Soup | $4    | Made with San Marzano tomatoes  |
-| Okonomiyaki | $4    | Takes a few minutes to make     |
-| Curry       | $3    | We can add squash if you’d like |
-## Seasonal Dishes
-| Name                 | Price | Notes              |
-| ---                  | ---   | ---                |
-| Steamed bitter melon | $2    | Not so bitter      |
-| Takoyaki             | $3    | Fun to eat         |
-| Winter squash        | $3    | Today it's pumpkin |
-## Desserts
-| Name         | Price | Notes                 |
-| ---          | ---   | ---                   |
-| Dorayaki     | $4    | Looks good on rabbits |
-| Banana Split | $5    | A classic             |
-| Cream Puff   | $3    | Pretty creamy!        |
-All our dishes are made in-house by Karen, our chef. Most of our ingredients
-are from our garden or the fish market down the street.
-Some famous people that have eaten here lately:
-* [x] René Redzepi
-* [x] David Chang
-* [ ] Jiro Ono (maybe some day)
-Bon appétit!
+# Grimoire
+## GitFlow
+* git ci - Enter commit message interactively
+* git ps - Push the current branch to the remote
+* git feat NAME - Switch a new branch from the current branch (feat/NAME)
+* git fix NAME - git switch -c fix/NAME
+* git hotfix NAME - git switch -c hotfix/NAME
+* git docs NAME - git switch -c docs/NAME
+* git style NAME - git switch -c style/NAME
+* git refactor NAME - git switch -c refactor/NAME
+* git chore NAME - git switch -c chore/NAME
+* git perf NAME - git switch -c perf/NAME
+* git style NAME - git switch -c style/NAME
+## .gitignore
+* goignore - generate .gitignore
+## GitHub
+* gh dash
+## Type speed
+* typer
+## Games
+* tetris
 `
 
 var helpStyle = lipgloss.NewStyle().Foreground(lipgloss.Color("241")).Render
@@ -47,7 +41,7 @@ type example struct {
 }
 
 func newExample() (*example, error) {
-	const width = 78
+	const width = 100
 
 	vp := viewport.New(width, 20)
 	vp.Style = lipgloss.NewStyle().
